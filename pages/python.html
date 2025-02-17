@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PythonTeacher</title>
     <link rel="stylesheet" href="../assets/style.css" />
-    <style>
-
-    </style>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style></style>
   </head>
   <body>
     <header class="header">
@@ -26,39 +25,201 @@
       </div>
     </header>
 
-    <main class="content">
-        <h1 class="page-heading"> Основной учебник Python</h1>
-        
-        <div class="course-card">
-            <div class="main-info">
-                <div class="image">
-                    <img
-                        src="../assets/images/images.png"
-                        width="31px"
-                        height="32px"
-                    />
-                </div>
+    <main class="content" id="app">
+      <h1 class="page-heading">Основной учебник Python</h1>
 
-                <div class="details">
-                    <div class="top">
-                        <span class="type"></span>
-                        <span class="difficulty">Легко</span>
-                    </div>
-                    <div class="middle">
-                        <h2>Циклы в Python</h2>
-                    </div>
-                    <div class="bottom">
-                        <div class="location">
-                            <span class="location-details">ввввввв</span>
-                            <span class="circle"></span>
-                            <span class="location-details">ааааа</span>
-                        </div>
-                        <span class="length">45 минут</span>
-                    </div>
-                </div>
+      <section class="course-card--wrapper">
+        <a
+          v-for="lesson in lessons"
+          :href="lesson.link"
+          :class="['course-card', lesson.difficulty]"
+        >
+          <div class="main-info">
+            <div class="image">
+              <img
+                src="../assets/images/images.png"
+                width="31px"
+                height="32px"
+              />
             </div>
-        </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="difficulty">{{ lesson.difficultyText }}</span>
+              </div>
+              <div class="middle">
+                <h2>{{ lesson.title }}</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">{{ lesson.duration }}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
     </main>
   </body>
 </html>
 
+<script>
+  const { createApp, ref } = Vue;
+
+  const useLessons = () => {
+    const lessons = ref([
+      {
+        title: "Введение в Python",
+        difficulty: "easy",
+        difficultyText: "Легко",
+        duration: "30 минут",
+        link: "#",
+      },
+      {
+        title: "Переменные и типы данных",
+        difficulty: "easy",
+        difficultyText: "Легко",
+        duration: "40 минут",
+        link: "#",
+      },
+      {
+        title: "Операторы в Python",
+        difficulty: "easy",
+        difficultyText: "Легко",
+        duration: "50 минут",
+        link: "#",
+      },
+      {
+        title: "Условные конструкции",
+        difficulty: "medium",
+        difficultyText: "Средне",
+        duration: "50 минут",
+        link: "#",
+      },
+      {
+        title: "Циклы в Python",
+        difficulty: "medium",
+        difficultyText: "Средне",
+        duration: "55 минут",
+        link: "#",
+      },
+      {
+        title: "Функции и их использование",
+        difficulty: "medium",
+        difficultyText: "Средне",
+        duration: "60 минут",
+        link: "#",
+      },
+      {
+        title: "Списки и кортежи",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "65 минут",
+        link: "#",
+      },
+      {
+        title: "Словари и множества",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "70 минут",
+        link: "#",
+      },
+      {
+        title: "Обработка ошибок и исключений",
+        difficulty: "medium",
+        difficultyText: "Средне",
+        duration: "45 минут",
+        link: "#",
+      },
+      {
+        title: "Модули и пакеты",
+        difficulty: "medium",
+        difficultyText: "Средне",
+        duration: "60 минут",
+        link: "#",
+      },
+      {
+        title: "Работа с файлами",
+        difficulty: "medium",
+        difficultyText: "Средне",
+        duration: "50 минут",
+        link: "#",
+      },
+      {
+        title: "Объектно-ориентированное программирование (ООП)",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "80 минут",
+        link: "#",
+      },
+      {
+        title: "Алгоритмы сортировки",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "75 минут",
+        link: "#",
+      },
+      {
+        title: "Библиотеки для научных вычислений",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "90 минут",
+        link: "#",
+      },
+      {
+        title: "Регулярные выражения",
+        difficulty: "medium",
+        difficultyText: "Средне",
+        duration: "60 минут",
+        link: "#",
+      },
+      {
+        title: "Работа с JSON",
+        difficulty: "medium",
+        difficultyText: "Средне",
+        duration: "55 минут",
+        link: "#",
+      },
+      {
+        title: "Асинхронное программирование",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "85 минут",
+        link: "#",
+      },
+      {
+        title: "Тестирование в Python",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "70 минут",
+        link: "#",
+      },
+      {
+        title: "Разработка веб-приложений с Flask",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "100 минут",
+        link: "#",
+      },
+      {
+        title: "Работа с базами данных (SQL)",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "90 минут",
+        link: "#",
+      },
+      {
+        title: "Основы многозадачности",
+        difficulty: "hard",
+        difficultyText: "Сложно",
+        duration: "75 минут",
+        link: "#",
+      },
+    ]);
+    return { lessons };
+  };
+
+  createApp({
+    setup() {
+      return useLessons();
+    },
+  }).mount("#app");
+</script>

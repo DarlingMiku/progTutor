@@ -15,7 +15,7 @@ body,
 input,
 button {
   font-size: ;
-  font-family: ;
+  font-family: "Calibri";
 }
 
 button {
@@ -63,9 +63,10 @@ a.pick {
 
 .page-heading{
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  
+  font-weight: 400;
+  font-size: 32px;
+  margin-top: 60px;
+  margin-bottom: 30px;
 }
 
 
@@ -80,6 +81,8 @@ a.pick {
   border-radius: 16px;
   box-shadow: 0px 4px 8px 0px rgba(68, 83, 113, 0.078);
   cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .main-info {
@@ -201,3 +204,12 @@ h2 {
 }
 
 /* card styles */
+
+/* card-wrapper */
+.course-card--wrapper {
+  display: grid;
+  gap: 30px;
+  margin-bottom: 60px;
+  grid-template-columns: repeat(4, 1fr);
+}
+/* card-wrapper */
