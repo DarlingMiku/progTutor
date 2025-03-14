@@ -457,3 +457,62 @@ h2 {
   background-color: #1397d0;
   color: white;
 }
+
+.lesson-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  padding: 30px;
+  border: 1px solid #e8e8e8;
+  border-radius: 25px;
+}
+
+.prev-lesson,
+.next-lesson {
+  border: 1px solid #e8e8e8;
+  background-color: unset;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.disabled {
+  border: 1px solid #ccc;
+  color: #aaa;
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.next-lesson:hover {
+  transition: all 0.3s ease;
+  background-color: #1397d0;
+}
+
+.prev-lesson:hover {
+  transition: all 0.3s ease;
+  background-color: #1397d0;
+}
+
+.prev-lesson > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.prev-lesson:hover > svg > path {
+  transition: all 0.3s ease;
+  stroke: white;
+}
+
+.next-lesson:hover > svg > path {
+  transition: all 0.3s ease;
+  stroke: white;
+}
+
+.next-lesson > svg {
+  transform: rotate(180deg);
+}
