@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Модули и пакеты</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое модули в Python?</h3>
+          <p class="card-text">
+            Модуль в Python — это файл, содержащий Python-код. Модули помогают
+            организовать код, разделяя его на логические части. Модуль можно
+            импортировать в другой файл с помощью ключевого слова
+            <code class="card-code">import</code>.
+          </p>
+          <pre class="card-pre"><code class="card-code"># Пример импорта модуля
+  import math
+  print(math.sqrt(16))  # Выводит: 4.0</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Создание собственного модуля</h3>
+          <p class="card-text">
+            Чтобы создать модуль, достаточно создать файл с расширением
+            <code class="card-code">.py</code>, например,
+            <code class="card-code">my_module.py</code>, и затем импортировать
+            его в других программах.
+          </p>
+          <pre class="card-pre"><code class="card-code"># Файл my_module.py
+  def greet(name):
+      return f"Привет, {name}!"
+  # В другом файле
+  import my_module
+  print(my_module.greet("Алексей"))  # Выводит: Привет, Алексей!</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Стандартные библиотеки Python</h3>
+          <p class="card-text">
+            Python поставляется с большим количеством встроенных стандартных
+            библиотек. Например, <code class="card-code">math</code>,
+            <code class="card-code">datetime</code>,
+            <code class="card-code">os</code>, которые предоставляют полезные
+            функции для работы с числами, датами и операционной системой.
+          </p>
+          <pre class="card-pre"><code class="card-code">import datetime
+  now = datetime.datetime.now()
+  print(now)  # Выводит текущую дату и время</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Работа с пакетами</h3>
+          <p class="card-text">
+            Пакет в Python — это директория, содержащая модули и специальный
+            файл <code class="card-code">__init__.py</code>, который позволяет
+            Python считать директорию пакетом. Пакеты могут содержать другие
+            пакеты (подпакеты).
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code"># Пример структуры пакета:
+  # my_package/
+  #     __init__.py
+  #     module1.py
+  #     module2.py
+  # Для импорта из пакета:
+  import my_package.module1</code></pre>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Создайте свой модуль, который содержит несколько функций
+              (например, для вычисления площади круга, периметра
+              прямоугольника). Импортируйте его в другом файле и используйте
+              функции.
+            </li>
+            <li class="dz-item">
+              Используйте стандартную библиотеку
+              <code class="card-code">math</code> для выполнения математических
+              операций, таких как вычисление квадратного корня или синуса угла.
+            </li>
+            <li class="dz-item">
+              Создайте пакет с двумя модулями, которые выполняют различные
+              функции. Пример: один модуль для работы с датами, другой — для
+              работы с текстами.
+            </li>
+            <li class="dz-item">
+              Изучите и попробуйте использовать другие стандартные библиотеки,
+              такие как <code class="card-code">os</code> или
+              <code class="card-code">random</code>.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

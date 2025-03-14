@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Основы работы с библиотеками Python</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое библиотеки в Python?</h3>
+          <p class="card-text">
+            Библиотеки в Python — это коллекции готовых функций и классов,
+            которые позволяют расширить функциональность языка и упростить
+            разработку. Библиотеки могут быть встроенными (например,
+            <code>math</code>, <code>os</code>) или сторонними, которые
+            устанавливаются через менеджер пакетов <strong>pip</strong>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Установка библиотек</h3>
+          <p class="card-text">
+            Для установки сторонних библиотек в Python используется инструмент
+            <strong>pip</strong>. Чтобы установить библиотеку, необходимо
+            выполнить команду:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">pip install <название_библиотеки></code></pre>
+          <p class="card-text">
+            Например, для установки библиотеки <strong>requests</strong>,
+            которая используется для работы с HTTP-запросами, необходимо
+            выполнить команду:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">pip install requests</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Пример использования библиотеки</h3>
+          <p class="card-text">
+            В следующем примере показано, как использовать библиотеку
+            <strong>math</strong> для работы с математическими функциями:
+          </p>
+          <pre class="card-pre"><code class="card-code">import math
+  
+  # Вычисление квадратного корня
+  sqrt_value = math.sqrt(25)
+  print(sqrt_value)  # 5.0</code></pre>
+          <p class="card-text">
+            В этом примере мы импортируем библиотеку <code>math</code> и
+            используем функцию <code>sqrt()</code> для вычисления квадратного
+            корня из числа 25.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">
+            Работа с библиотеками сторонних разработчиков
+          </h3>
+          <p class="card-text">
+            Для работы с внешними библиотеками, как правило, требуется сначала
+            установить их, а затем импортировать в ваш проект. Например, для
+            работы с <strong>requests</strong> библиотекой, которая упрощает
+            работу с HTTP-запросами, можно написать следующий код:
+          </p>
+          <pre class="card-pre"><code class="card-code">import requests
+  
+  response = requests.get('https://api.github.com')
+  print(response.json())</code></pre>
+          <p class="card-text">
+            Этот код делает GET-запрос к API GitHub и выводит полученные данные
+            в формате JSON.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Работа с виртуальными окружениями</h3>
+          <p class="card-text">
+            Для управления зависимостями проекта рекомендуется использовать
+            виртуальное окружение. Это позволяет изолировать библиотеки и версии
+            Python для каждого проекта. Чтобы создать виртуальное окружение,
+            используйте команду:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">python -m venv myenv</code></pre>
+          <p class="card-text">
+            После создания виртуального окружения его необходимо активировать:
+          </p>
+          <pre class="card-pre"><code class="card-code"># На Windows
+  myenv\Scripts\activate
+  
+  # На macOS и Linux
+  source myenv/bin/activate</code></pre>
+          <p class="card-text">
+            После активации виртуального окружения вы можете устанавливать
+            библиотеки, и они будут доступны только в этом окружении.
+          </p>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Установите библиотеку <strong>requests</strong> и используйте ее
+              для получения данных с любого открытого API.
+            </li>
+            <li class="dz-item">
+              Напишите программу, которая использует библиотеку
+              <strong>math</strong> для вычисления квадратного корня, логарифма
+              и степени.
+            </li>
+            <li class="dz-item">
+              Создайте виртуальное окружение для вашего проекта и установите
+              библиотеку <strong>numpy</strong> для выполнения математических
+              операций.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">
+          Объектно-ориентированное программирование (ООП)
+        </h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое ООП?</h3>
+          <p class="card-text">
+            Объектно-ориентированное программирование (ООП) — это парадигма
+            программирования, основанная на использовании объектов, которые
+            являются экземплярами классов. Основные концепции ООП включают
+            инкапсуляцию, наследование и полиморфизм.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Создание класса и объекта</h3>
+          <p class="card-text">
+            В Python для создания класса используется ключевое слово
+            <code class="card-code">class</code>. Объект класса создается путём
+            вызова класса как функции.
+          </p>
+          <pre class="card-pre"><code class="card-code"># Пример класса
+  class Car:
+      def __init__(self, make, model):
+          self.make = make
+          self.model = model
+  
+      def info(self):
+          return f"Марка: {self.make}, Модель: {self.model}"
+  
+  # Создание объекта
+  my_car = Car("Toyota", "Corolla")
+  print(my_car.info())  # Выводит: Марка: Toyota, Модель: Corolla</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Конструктор __init__</h3>
+          <p class="card-text">
+            Метод <code class="card-code">__init__</code> в Python используется
+            для инициализации объектов. Он автоматически вызывается при создании
+            нового экземпляра класса.
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code"># Пример конструктора __init__
+  class Person:
+      def __init__(self, name, age):
+          self.name = name
+          self.age = age
+  
+      def greet(self):
+          return f"Привет, меня зовут {self.name} и мне {self.age} лет."
+  
+  # Создание объекта
+  person = Person("Алексей", 25)
+  print(person.greet())  # Выводит: Привет, меня зовут Алексей и мне 25 лет.</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Наследование в Python</h3>
+          <p class="card-text">
+            Наследование позволяет создавать новый класс на основе
+            существующего, наследуя его свойства и методы. Это способствует
+            повторному использованию кода и улучшению структуры программы.
+          </p>
+          <pre class="card-pre"><code class="card-code"># Пример наследования
+  class Animal:
+      def speak(self):
+          return "Животное издает звук"
+  
+  class Dog(Animal):
+      def speak(self):
+          return "Гав!"
+  
+  # Создание объекта Dog
+  dog = Dog()
+  print(dog.speak())  # Выводит: Гав!</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Полиморфизм</h3>
+          <p class="card-text">
+            Полиморфизм позволяет объектам разных классов обрабатывать
+            одинаковые сообщения или вызывать одинаковые методы, но с разным
+            поведением.
+          </p>
+          <pre class="card-pre"><code class="card-code"># Пример полиморфизма
+  class Cat(Animal):
+      def speak(self):
+          return "Мяу!"
+  
+  def make_animal_speak(animal):
+      print(animal.speak())
+  
+  # Создание объектов
+  cat = Cat()
+  dog = Dog()
+  
+  # Вызов одного метода для разных объектов
+  make_animal_speak(cat)  # Выводит: Мяу!
+  make_animal_speak(dog)  # Выводит: Гав!</code></pre>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Создайте класс <code class="card-code">Student</code>, который
+              будет содержать атрибуты имени, возраста и оценок. Добавьте методы
+              для вывода информации о студенте и подсчета средней оценки.
+            </li>
+            <li class="dz-item">
+              Создайте класс <code class="card-code">Employee</code>, который
+              будет наследовать от класса <code class="card-code">Person</code>,
+              добавьте в него атрибуты должности и зарплаты, а также метод для
+              увеличения зарплаты.
+            </li>
+            <li class="dz-item">
+              Используя полиморфизм, создайте метод, который будет принимать
+              объект разных классов (например,
+              <code class="card-code">Dog</code> и
+              <code class="card-code">Cat</code>) и выводить сообщение о звуке,
+              который издает животное.
+            </li>
+            <li class="dz-item">
+              Напишите программу, которая создает несколько объектов разных
+              классов и вызывает их методы.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

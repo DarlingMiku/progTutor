@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Основы многозадачности</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое многозадачность?</h3>
+          <p class="card-text">
+            Многозадачность — это способность операционной системы или
+            программного обеспечения выполнять несколько задач одновременно. В
+            Python многозадачность может быть реализована с использованием
+            потоков и процессов.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Типы многозадачности</h3>
+          <p class="card-text">
+            В Python многозадачность можно реализовать разными способами:
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <strong>Потоки (Threads):</strong> Позволяют запускать несколько
+              задач в одном процессе. Это подход, который подходит для задач,
+              которые могут выполняться параллельно, но не требуют сложной
+              изоляции.
+            </li>
+            <li class="card-item">
+              <strong>Процессы (Processes):</strong> Запуск отдельных процессов
+              для выполнения задач. Каждый процесс имеет свой собственный адрес
+              памяти, что делает его более изолированным и стабильным.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Потоки в Python</h3>
+          <p class="card-text">
+            Для работы с потоками в Python используется модуль
+            <strong>threading</strong>. Потоки полезны, когда вам нужно
+            выполнять несколько задач параллельно в одном процессе, например,
+            при работе с сетевыми запросами или при параллельной обработке
+            данных.
+          </p>
+          <p class="card-text">Пример использования потоков:</p>
+          <pre class="card-pre"><code class="card-code">import threading
+  
+  def print_numbers():
+      for i in range(1, 6):
+          print(i)
+  
+  thread = threading.Thread(target=print_numbers)
+  thread.start()</code></pre>
+          <p class="card-text">
+            В этом примере создается поток, который выполняет функцию
+            <code>print_numbers()</code>, выводящую числа от 1 до 5.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Процессы в Python</h3>
+          <p class="card-text">
+            Для работы с процессами в Python используется модуль
+            <strong>multiprocessing</strong>. Процессы обеспечивают полную
+            изоляцию, что делает их подходящими для задач, которые требуют
+            значительных ресурсов или требуют работы с большими объемами данных.
+          </p>
+          <p class="card-text">Пример использования процессов:</p>
+          <pre class="card-pre"><code class="card-code">import multiprocessing
+  
+  def print_numbers():
+      for i in range(1, 6):
+          print(i)
+  
+  if __name__ == "__main__":
+      process = multiprocessing.Process(target=print_numbers)
+      process.start()
+      process.join()</code></pre>
+          <p class="card-text">
+            Этот код создает новый процесс для выполнения функции
+            <code>print_numbers()</code>. Метод <code>join()</code> ожидает
+            завершения процесса перед продолжением работы программы.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Асинхронность в Python</h3>
+          <p class="card-text">
+            Асинхронность — это другой подход к многозадачности, который
+            позволяет эффективно использовать ресурсы процессора, выполняя
+            операции, которые требуют ожидания (например, сетевые запросы), без
+            блокировки других задач.
+          </p>
+          <p class="card-text">
+            Для реализации асинхронных задач в Python используется модуль
+            <strong>asyncio</strong>.
+          </p>
+          <p class="card-text">Пример асинхронного кода:</p>
+          <pre class="card-pre"><code class="card-code">import asyncio
+  
+  async def print_numbers():
+      for i in range(1, 6):
+          print(i)
+          await asyncio.sleep(1)  # имитация асинхронной операции
+  
+  asyncio.run(print_numbers())</code></pre>
+          <p class="card-text">
+            Этот код выполняет асинхронную функцию <code>print_numbers()</code>,
+            при этом каждый шаг приостанавливается на 1 секунду, позволяя другим
+            операциям продолжать выполнение.
+          </p>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Напишите программу с использованием потоков, которая будет
+              выводить числа от 1 до 10 в два потока (по очереди).
+            </li>
+            <li class="dz-item">
+              Используйте процесс для вычисления факториала числа и выведите
+              результат в основной процесс.
+            </li>
+            <li class="dz-item">
+              Напишите асинхронную программу, которая делает несколько
+              HTTP-запросов параллельно и выводит ответы.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

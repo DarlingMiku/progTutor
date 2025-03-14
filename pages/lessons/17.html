@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+        <div class="header-nav">
+          <a href="../notfound.html">Верстка</a>
+          <a href="../notfound.html">JavaScript</a>
+          <a href="../notfound.html">TypeScript</a>
+          <a href="../notfound.html">Node</a>
+          <a href="../notfound.html">Java</a>
+          <a href="../notfound.html">PHP</a>
+          <a href="../python.html" class="pick">Python</a>
+          <a href="../notfound.html">С++</a>
+          <a href="../notfound.html">Rust</a>
+          <a href="../notfound.html">SQL</a>
+          <a href="../notfound.html">Vue</a>
+        </div>
+      </header>
+
+    <main class="content container">
+
+      <div class="lesson">
+          <h2 class="content-title">Тестирование в Python</h2>
+  
+          <div class="card">
+              <h3 class="card-head">Что такое тестирование?</h3>
+              <p class="card-text">Тестирование — это процесс проверки программы на корректность ее работы. Тестирование позволяет выявить ошибки в коде и убедиться в том, что программа выполняет свои задачи корректно.</p>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Типы тестирования</h3>
+              <p class="card-text">Существует несколько типов тестирования, включая:</p>
+              <ul class="card-list">
+                  <li class="card-item"><strong>Юнит-тестирование</strong>: Тестирование отдельных функций или классов.</li>
+                  <li class="card-item"><strong>Интеграционное тестирование</strong>: Проверка взаимодействия между модулями.</li>
+                  <li class="card-item"><strong>Системное тестирование</strong>: Полная проверка всей системы.</li>
+                  <li class="card-item"><strong>Регрессионное тестирование</strong>: Проверка того, что изменения в коде не нарушили предыдущую функциональность.</li>
+              </ul>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Модуль unittest</h3>
+              <p class="card-text">Python предоставляет встроенный модуль <strong>unittest</strong>, который позволяет создавать и запускать тесты для ваших программ.</p>
+              <p class="card-text">Вот как выглядит базовый пример юнит-теста:</p>
+              <pre class="card-pre"><code class="card-code">import unittest
+  
+  # Функция для тестирования
+  def add(a, b):
+      return a + b
+  
+  # Класс с тестами
+  class TestAddition(unittest.TestCase):
+      def test_add_positive_numbers(self):
+          self.assertEqual(add(2, 3), 5)
+  
+      def test_add_negative_numbers(self):
+          self.assertEqual(add(-2, -3), -5)
+  
+      def test_add_zero(self):
+          self.assertEqual(add(0, 0), 0)
+  
+  if __name__ == "__main__":
+      unittest.main()</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Запуск тестов</h3>
+              <p class="card-text">Тесты можно запустить через командную строку, используя команду <code>python -m unittest</code>. Эта команда выполнит все тесты в текущем файле или указанной директории.</p>
+              <pre class="card-pre"><code class="card-code">python -m unittest test_file.py</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Ассерты в тестах</h3>
+              <p class="card-text">В тестах часто используются различные ассерты для проверки ожидаемых значений. Например:</p>
+              <ul class="card-list">
+                  <li class="card-item"><code>assertEqual(a, b)</code>: Проверяет, что <code>a</code> и <code>b</code> равны.</li>
+                  <li class="card-item"><code>assertNotEqual(a, b)</code>: Проверяет, что <code>a</code> и <code>b</code> не равны.</li>
+                  <li class="card-item"><code>assertTrue(x)</code>: Проверяет, что <code>x</code> истинно.</li>
+                  <li class="card-item"><code>assertFalse(x)</code>: Проверяет, что <code>x</code> ложно.</li>
+              </ul>
+          </div>
+  
+          <div class="dz">
+              <h3 class="dz-head">Домашнее задание</h3>
+              <ul class="dz-list">
+                  <li class="dz-item">Создайте тесты для функции, которая находит максимальное число в списке.</li>
+                  <li class="dz-item">Напишите тесты для функции, которая проверяет, является ли строка палиндромом.</li>
+                  <li class="dz-item">Используя <code>unittest</code>, напишите тесты для функции, которая считает сумму всех чисел в списке.</li>
+                  <li class="dz-item">Попробуйте реализовать и протестировать функцию для сортировки списка.</li>
+              </ul>
+          </div>
+  
+      </div>
+  
+  </main>
+  
+
+  </body>
+</html>

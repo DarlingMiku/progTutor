@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Регулярные выражения</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое регулярные выражения?</h3>
+          <p class="card-text">
+            Регулярные выражения (RegEx) — это мощный инструмент для работы с
+            текстом, который позволяет искать, заменять или извлекать данные с
+            помощью шаблонов. Они широко используются для проверки ввода,
+            обработки строк и извлечения данных из текстов.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Синтаксис регулярных выражений</h3>
+          <p class="card-text">
+            Регулярные выражения состоят из символов, которые создают шаблон для
+            поиска строк. Вот несколько основных элементов синтаксиса:
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <strong>.</strong> — любой символ, кроме новой строки
+            </li>
+            <li class="card-item">
+              <strong>\d</strong> — цифра (аналог [0-9])
+            </li>
+            <li class="card-item">
+              <strong>\w</strong> — буквенно-цифровой символ (аналог
+              [a-zA-Z0-9_])
+            </li>
+            <li class="card-item">
+              <strong>\s</strong> — пробельный символ (пробел, табуляция, новая
+              строка и т. д.)
+            </li>
+            <li class="card-item"><strong>^</strong> — начало строки</li>
+            <li class="card-item"><strong>$</strong> — конец строки</li>
+            <li class="card-item">
+              <strong>+</strong> — один или более повторений
+            </li>
+            <li class="card-item">
+              <strong>*</strong> — ноль или более повторений
+            </li>
+            <li class="card-item"><strong>{n}</strong> — ровно n повторений</li>
+            <li class="card-item"><strong>[ ]</strong> — набор символов</li>
+            <li class="card-item"><strong>( )</strong> — группы и захват</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Пример использования регулярных выражений</h3>
+          <p class="card-text">
+            Для работы с регулярными выражениями в Python используется модуль
+            <strong>re</strong>.
+          </p>
+          <pre class="card-pre"><code class="card-code">import re
+  
+  # Поиск всех чисел в строке
+  text = "У меня 2 яблока и 3 апельсина."
+  numbers = re.findall(r'\d+', text)
+  print(numbers)  # Выводит: ['2', '3']</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Пример поиска и замены</h3>
+          <p class="card-text">
+            Мы можем использовать регулярные выражения для поиска и замены
+            текста в строках.
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code"># Заменим все цифры на символ 'X'
+  text = "Мой номер 123-456-7890"
+  new_text = re.sub(r'\d', 'X', text)
+  print(new_text)  # Выводит: "Мой номер XXX-XXX-XXXX"</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Поиск по шаблону</h3>
+          <p class="card-text">
+            Регулярные выражения также могут быть использованы для поиска
+            данных, соответствующих шаблону. Например, для проверки формата
+            электронной почты:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code"># Проверка правильности email
+  email = "example@example.com"
+  is_valid = re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$', email)
+  
+  if is_valid:
+      print("Электронная почта валидна")
+  else:
+      print("Электронная почта не валидна")</code></pre>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Напишите регулярное выражение для поиска всех слов в строке,
+              состоящих только из букв (без чисел и знаков).
+            </li>
+            <li class="dz-item">
+              Используйте регулярное выражение для проверки формата телефонного
+              номера в международном формате (например, +1 234-567-8900).
+            </li>
+            <li class="dz-item">
+              Создайте программу, которая заменяет все даты в формате
+              "день.месяц.год" на "год-месяц-день".
+            </li>
+            <li class="dz-item">
+              Используйте регулярные выражения для удаления всех лишних пробелов
+              из строки, оставив только один пробел между словами.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

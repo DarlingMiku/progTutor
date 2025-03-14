@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Операторы в Python</h2>
+
+        <div class="card">
+          <h3 class="card-head">Арифметические операторы</h3>
+          <p class="card-text">
+            Python поддерживает стандартные арифметические операции:
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <code class="card-code">+</code> — сложение (<code>5 + 3</code> →
+              <code>8</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">-</code> — вычитание (<code>10 - 4</code>
+              → <code>6</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">*</code> — умножение (<code>6 * 7</code> →
+              <code>42</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">/</code> — деление (<code>8 / 2</code> →
+              <code>4.0</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">//</code> — целочисленное деление (<code
+                >9 // 2</code
+              >
+              → <code>4</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">%</code> — остаток от деления (<code
+                >10 % 3</code
+              >
+              → <code>1</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">**</code> — возведение в степень (<code
+                >2 ** 3</code
+              >
+              → <code>8</code>)
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Операторы сравнения</h3>
+          <p class="card-text">
+            Операторы сравнения возвращают
+            <code class="card-code">True</code> или
+            <code class="card-code">False</code>:
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <code class="card-code">==</code> — равно (<code>5 == 5</code> →
+              <code>True</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">!=</code> — не равно (<code>3 != 2</code>
+              → <code>True</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">&gt;</code> — больше (<code
+                >7 &gt; 3</code
+              >
+              → <code>True</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">&lt;</code> — меньше (<code
+                >2 &lt; 5</code
+              >
+              → <code>True</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">&gt;=</code> — больше или равно (<code
+                >4 &gt;= 4</code
+              >
+              → <code>True</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">&lt;=</code> — меньше или равно (<code
+                >6 &lt;= 8</code
+              >
+              → <code>True</code>)
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Логические операторы</h3>
+          <p class="card-text">
+            Логические операторы используются для объединения условий:
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <code class="card-code">and</code> — логическое "и" (<code
+                >True and False</code
+              >
+              → <code>False</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">or</code> — логическое "или" (<code
+                >True or False</code
+              >
+              → <code>True</code>)
+            </li>
+            <li class="card-item">
+              <code class="card-code">not</code> — логическое "не" (<code
+                >not True</code
+              >
+              → <code>False</code>)
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Присваивание с операциями</h3>
+          <p class="card-text">Можно совмещать присваивание и операции:</p>
+          <pre class="card-pre"><code class="card-code">x = 5
+x += 3  # x = x + 3 → 8
+x -= 2  # x = x - 2 → 6
+x *= 4  # x = x * 4 → 24
+x /= 3  # x = x / 3 → 8.0</code></pre>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Напишите программу, которая принимает два числа и выполняет все
+              арифметические операции с ними.
+            </li>
+            <li class="dz-item">
+              Используйте операторы сравнения и выведите их результаты.
+            </li>
+            <li class="dz-item">
+              Создайте три логических переменных и проверьте их комбинации с
+              <code class="card-code">and</code>,
+              <code class="card-code">or</code> и
+              <code class="card-code">not</code>.
+            </li>
+            <li class="dz-item">
+              Попробуйте изменить значение переменной с помощью операторов
+              <code class="card-code">+=</code>,
+              <code class="card-code">-=</code> и других.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

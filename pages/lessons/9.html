@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Обработка ошибок и исключений</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое исключения?</h3>
+          <p class="card-text">
+            Исключения — это ошибки, которые возникают во время выполнения
+            программы. Они могут быть вызваны неправильным вводом, делением на
+            ноль, доступом к несуществующему элементу и так далее.
+          </p>
+          <p class="card-text">
+            Python позволяет перехватывать исключения и обрабатывать их с
+            помощью блока <code class="card-code">try-except</code>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Блок try-except</h3>
+          <p class="card-text">
+            Блок <code class="card-code">try</code> используется для выполнения
+            кода, который может вызвать исключение. Блок
+            <code class="card-code">except</code> используется для обработки
+            исключения, если оно возникает.
+          </p>
+          <pre class="card-pre"><code class="card-code">try:
+      result = 10 / 0  # Деление на ноль
+  except ZeroDivisionError:
+      print("Ошибка: деление на ноль!")  # Обработка ошибки</code></pre>
+          <p class="card-text">
+            Этот код поймает исключение
+            <code class="card-code">ZeroDivisionError</code> и выведет сообщение
+            об ошибке.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Обработка нескольких исключений</h3>
+          <p class="card-text">
+            Можно обрабатывать несколько типов исключений с помощью нескольких
+            блоков <code class="card-code">except</code>.
+          </p>
+          <pre class="card-pre"><code class="card-code">try:
+      x = int(input("Введите число: "))
+      result = 10 / x
+  except ZeroDivisionError:
+      print("Ошибка: деление на ноль!")
+  except ValueError:
+      print("Ошибка: введено не число!")  # Обработка ошибки ввода</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Блок finally</h3>
+          <p class="card-text">
+            Блок <code class="card-code">finally</code> выполняется всегда,
+            независимо от того, возникло исключение или нет. Он используется для
+            выполнения завершающих операций (например, закрытия файлов).
+          </p>
+          <pre class="card-pre"><code class="card-code">try:
+      file = open("file.txt", "r")
+  except FileNotFoundError:
+      print("Файл не найден")
+  finally:
+      print("Операция завершена")  # Этот блок выполнится в любом случае</code></pre>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Напишите программу, которая запрашивает у пользователя число и
+              делит 10 на это число. Обработайте возможное исключение деления на
+              ноль.
+            </li>
+            <li class="dz-item">
+              Создайте программу, которая пытается открыть файл, которого нет в
+              системе, и обрабатывает исключение
+              <code class="card-code">FileNotFoundError</code>.
+            </li>
+            <li class="dz-item">
+              Напишите программу, которая запрашивает у пользователя число, но
+              если введено не число, выводит сообщение об ошибке с помощью
+              исключения <code class="card-code">ValueError</code>.
+            </li>
+            <li class="dz-item">
+              Создайте программу с несколькими блоками
+              <code class="card-code">except</code>, которые обрабатывают
+              различные типы исключений, например,
+              <code class="card-code">ZeroDivisionError</code> и
+              <code class="card-code">ValueError</code>.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

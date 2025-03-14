@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Работа с JSON</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое JSON?</h3>
+          <p class="card-text">
+            JSON (JavaScript Object Notation) — это легкий формат обмена
+            данными, который используется для хранения и передачи данных между
+            клиентом и сервером. Он легко читаем человеком и удобно
+            обрабатывается программами.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Основные элементы JSON</h3>
+          <p class="card-text">
+            JSON представляет собой текстовый формат, основанный на
+            представлении данных в виде пар "ключ-значение" (аналогично словарям
+            в Python).
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <strong>Объекты</strong>: Набор пар "ключ: значение", заключенный
+              в фигурные скобки ({})
+            </li>
+            <li class="card-item">
+              <strong>Массивы</strong>: Упорядоченный набор значений,
+              заключенный в квадратные скобки ([])
+            </li>
+            <li class="card-item">
+              <strong>Ключи</strong>: Строки, которые должны быть заключены в
+              двойные кавычки
+            </li>
+            <li class="card-item">
+              <strong>Значения</strong>: Могут быть строками, числами,
+              массивами, объектами или булевыми значениями
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Пример JSON</h3>
+          <p class="card-text">Пример простого объекта JSON:</p>
+          <pre class="card-pre"><code class="card-code">{
+    "name": "Alice",
+    "age": 25,
+    "isStudent": false,
+    "courses": ["Python", "JavaScript", "HTML"],
+    "address": {
+      "city": "New York",
+      "zip": "10001"
+    }
+  }</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Работа с JSON в Python</h3>
+          <p class="card-text">
+            В Python для работы с JSON используется встроенный модуль
+            <strong>json</strong>.
+          </p>
+          <p class="card-text">
+            Чтобы преобразовать Python-объект в JSON-строку, используйте
+            <code>json.dumps()</code>. Для преобразования JSON-строки в
+            Python-объект — <code>json.loads()</code>.
+          </p>
+          <pre class="card-pre"><code class="card-code">import json
+  
+  # Преобразование Python объекта в JSON строку
+  person = {
+    "name": "Alice",
+    "age": 25,
+    "isStudent": False,
+    "courses": ["Python", "JavaScript", "HTML"]
+  }
+  json_string = json.dumps(person, indent=4)
+  print(json_string)  # Преобразует в строку JSON
+  
+  # Преобразование JSON строки в Python объект
+  json_data = '{"name": "Alice", "age": 25, "isStudent": false, "courses": ["Python", "JavaScript", "HTML"]}'
+  python_obj = json.loads(json_data)
+  print(python_obj)  # Преобразует в Python словарь</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Чтение и запись JSON в файл</h3>
+          <p class="card-text">
+            Вы можете сохранить JSON данные в файл и затем считать их обратно:
+          </p>
+          <pre class="card-pre"><code class="card-code">import json
+  
+  # Сохранение данных в файл
+  data = {
+      "name": "Bob",
+      "age": 30,
+      "isStudent": True
+  }
+  with open("data.json", "w") as json_file:
+      json.dump(data, json_file)
+  
+  # Чтение данных из файла
+  with open("data.json", "r") as json_file:
+      loaded_data = json.load(json_file)
+      print(loaded_data)</code></pre>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Создайте Python программу, которая читает JSON файл, добавляет
+              новое поле "email" и сохраняет обновленные данные в новый файл.
+            </li>
+            <li class="dz-item">
+              Используйте <code>json.dumps()</code> для конвертации Python
+              словаря с данными о фильме в JSON строку. Включите поля: название
+              фильма, год выпуска, жанр и рейтинг.
+            </li>
+            <li class="dz-item">
+              Напишите программу, которая получает JSON строку с данными о
+              пользователе (например, имя, возраст, адрес) и выводит информацию
+              в удобочитаемом формате.
+            </li>
+            <li class="dz-item">
+              Сделайте программу, которая извлекает список всех курсов из JSON
+              объекта, содержащего информацию о студентах, и выводит их.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Списки и кортежи</h2>
+
+        <div class="card">
+          <h3 class="card-head">Списки</h3>
+          <p class="card-text">
+            Списки в Python — это изменяемые последовательности. Они могут
+            содержать элементы разных типов.
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">my_list = [1, 2, 3, "Python", True]</code></pre>
+          <p class="card-text">
+            Для доступа к элементам списка используется индекс (нумерация с 0).
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">print(my_list[0])  # Выводит: 1</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Методы списков</h3>
+          <p class="card-text">
+            Списки имеют множество полезных методов, таких как
+            <code class="card-code">append()</code>,
+            <code class="card-code">remove()</code>,
+            <code class="card-code">pop()</code> и другие.
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">my_list.append(42)  # Добавляет элемент в конец списка
+    print(my_list)  # Выводит: [1, 2, 3, 'Python', True, 42]</code></pre>
+          <pre
+            class="card-pre"
+          ><code class="card-code">my_list.remove("Python")  # Удаляет элемент из списка
+    print(my_list)  # Выводит: [1, 2, 3, True, 42]</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Кортежи</h3>
+          <p class="card-text">
+            Кортежи — это неизменяемые последовательности. После создания
+            кортежа его элементы нельзя изменить.
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">my_tuple = (1, 2, 3, "Python", True)</code></pre>
+          <p class="card-text">
+            Доступ к элементам кортежа происходит так же, как и у списков, но
+            элементы нельзя изменять.
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">print(my_tuple[1])  # Выводит: 2</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Сравнение списков и кортежей</h3>
+          <p class="card-text">
+            Основное отличие между списками и кортежами — изменяемость. Списки
+            изменяемы, а кортежи — нет. Кортежи обычно используются для хранения
+            фиксированных данных, которые не должны изменяться.
+          </p>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Создайте список с числами от 1 до 10 и выведите его элементы с
+              помощью цикла <code class="card-code">for</code>.
+            </li>
+            <li class="dz-item">
+              Напишите программу, которая удаляет элемент из списка по индексу и
+              выводит измененный список.
+            </li>
+            <li class="dz-item">
+              Создайте кортеж с несколькими типами данных (например, числа,
+              строки, логические значения). Выведите первый элемент кортежа.
+            </li>
+            <li class="dz-item">
+              Создайте список с числами от 1 до 10, а затем отсортируйте его и
+              выведите отсортированный список.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

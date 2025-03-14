@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+
+        <div class="lesson">
+            <h2 class="content-title">Функции и их использование</h2>
+    
+            <div class="card">
+                <h3 class="card-head">Определение функции</h3>
+                <p class="card-text">Функции в Python определяются с помощью ключевого слова <code class="card-code">def</code>, за которым идет имя функции и список параметров в круглых скобках.</p>
+                <pre class="card-pre"><code class="card-code">def greet(name):
+        print(f"Привет, {name}!")</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Вызов функции</h3>
+                <p class="card-text">Для вызова функции нужно использовать ее имя и передать необходимые аргументы.</p>
+                <pre class="card-pre"><code class="card-code">greet("Алексей")  # Выводит: Привет, Алексей!</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Возвращаемые значения</h3>
+                <p class="card-text">Функции могут возвращать значения с помощью оператора <code class="card-code">return</code>.</p>
+                <pre class="card-pre"><code class="card-code">def add(a, b):
+        return a + b
+    
+    result = add(3, 4)
+    print(result)  # Выводит: 7</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Параметры по умолчанию</h3>
+                <p class="card-text">Можно задавать значения параметров по умолчанию, которые будут использованы, если при вызове функции не переданы аргументы для этих параметров.</p>
+                <pre class="card-pre"><code class="card-code">def greet(name="Гость"):
+        print(f"Привет, {name}!")
+    
+    greet()  # Выводит: Привет, Гость!
+    greet("Алексей")  # Выводит: Привет, Алексей!</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Аргументы переменной длины</h3>
+                <p class="card-text">Для передачи переменного количества аргументов используется звездочка <code class="card-code">*</code> в параметре функции.</p>
+                <pre class="card-pre"><code class="card-code">def greet(*names):
+        for name in names:
+            print(f"Привет, {name}!")
+    
+    greet("Алексей", "Мария", "Петр")</code></pre>
+            </div>
+    
+            <div class="dz">
+                <h3 class="dz-head">Домашнее задание</h3>
+                <ul class="dz-list">
+                    <li class="dz-item">Напишите функцию <code class="card-code">multiply(a, b)</code>, которая принимает два числа и возвращает их произведение.</li>
+                    <li class="dz-item">Создайте функцию <code class="card-code">factorial(n)</code>, которая возвращает факториал числа <code class="card-code">n</code>.</li>
+                    <li class="dz-item">Напишите функцию <code class="card-code">sum_numbers(*args)</code>, которая принимает произвольное количество чисел и возвращает их сумму.</li>
+                    <li class="dz-item">Создайте функцию <code class="card-code">describe_person(name, age, country="Россия")</code>, которая выводит описание человека. Параметр <code class="card-code">country</code> должен иметь значение по умолчанию.</li>
+                </ul>
+            </div>
+    
+        </div>
+    
+    </main>
+    
+    
+  </body>
+</html>

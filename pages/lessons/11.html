@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+
+      <div class="lesson">
+          <h2 class="content-title">Работа с файлами</h2>
+  
+          <div class="card">
+              <h3 class="card-head">Открытие файла</h3>
+              <p class="card-text">Для работы с файлами в Python используется встроенная функция <code class="card-code">open()</code>. Она позволяет открыть файл для чтения, записи или добавления данных.</p>
+              <pre class="card-pre"><code class="card-code"># Открытие файла для чтения
+  file = open("example.txt", "r")
+  content = file.read()  # Чтение содержимого файла
+  file.close()  # Закрытие файла</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Чтение и запись в файл</h3>
+              <p class="card-text">Для записи данных в файл используется режим <code class="card-code">"w"</code> или <code class="card-code">"a"</code> (для добавления в конец файла). Для чтения используется режим <code class="card-code">"r"</code>.</p>
+              <pre class="card-pre"><code class="card-code"># Запись в файл
+  file = open("example.txt", "w")
+  file.write("Hello, Python!")  # Запись строки в файл
+  file.close()  # Закрытие файла
+  
+  # Чтение из файла
+  file = open("example.txt", "r")
+  content = file.read()  # Чтение содержимого файла
+  print(content)
+  file.close()  # Закрытие файла</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Работа с большими файлами</h3>
+              <p class="card-text">Когда нужно работать с большими файлами, лучше использовать чтение файла построчно, чтобы не загружать весь файл в память сразу.</p>
+              <pre class="card-pre"><code class="card-code"># Чтение файла построчно
+  file = open("example.txt", "r")
+  for line in file:
+      print(line.strip())  # Вывод каждой строки
+  file.close()  # Закрытие файла</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Использование контекстного менеджера</h3>
+              <p class="card-text">Контекстный менеджер <code class="card-code">with</code> позволяет автоматически закрыть файл после завершения работы с ним, что улучшает безопасность кода.</p>
+              <pre class="card-pre"><code class="card-code"># Использование with
+  with open("example.txt", "r") as file:
+      content = file.read()  # Чтение содержимого файла
+      print(content)
+  # Файл будет автоматически закрыт после выхода из блока with</code></pre>
+          </div>
+  
+          <div class="dz">
+              <h3 class="dz-head">Домашнее задание</h3>
+              <ul class="dz-list">
+                  <li class="dz-item">Напишите программу, которая открывает текстовый файл, читает его содержимое и выводит на экран.</li>
+                  <li class="dz-item">Создайте программу, которая записывает несколько строк текста в файл. После этого программа должна вывести содержимое этого файла на экран.</li>
+                  <li class="dz-item">Создайте программу, которая будет записывать пользовательский ввод в файл. Программа должна работать в цикле и завершаться по команде пользователя (например, при вводе "выход").</li>
+                  <li class="dz-item">Используйте контекстный менеджер <code class="card-code">with</code> для работы с файлами в вашей программе.</li>
+              </ul>
+          </div>
+  
+      </div>
+  
+  </main>
+  
+    
+  </body>
+</html>

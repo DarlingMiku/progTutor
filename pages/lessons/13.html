@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+        <div class="header-nav">
+          <a href="../notfound.html">Верстка</a>
+          <a href="../notfound.html">JavaScript</a>
+          <a href="../notfound.html">TypeScript</a>
+          <a href="../notfound.html">Node</a>
+          <a href="../notfound.html">Java</a>
+          <a href="../notfound.html">PHP</a>
+          <a href="../python.html" class="pick">Python</a>
+          <a href="../notfound.html">С++</a>
+          <a href="../notfound.html">Rust</a>
+          <a href="../notfound.html">SQL</a>
+          <a href="../notfound.html">Vue</a>
+        </div>
+      </header>
+
+    <main class="content container">
+
+      <div class="lesson">
+          <h2 class="content-title">Алгоритмы сортировки</h2>
+  
+          <div class="card">
+              <h3 class="card-head">Что такое алгоритмы сортировки?</h3>
+              <p class="card-text">Алгоритмы сортировки — это методы упорядочивания элементов в списке или массиве по определенному критерию, например, по возрастанию или убыванию. В Python для сортировки списков можно использовать встроенную функцию <code class="card-code">sort()</code> или <code class="card-code">sorted()</code>.</p>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Основные алгоритмы сортировки</h3>
+              <p class="card-text">Существует множество алгоритмов сортировки, каждый из которых имеет свои особенности по времени выполнения, сложности и области применения. Мы рассмотрим несколько популярных сортировок:</p>
+              <ul class="card-list">
+                  <li class="card-item">Сортировка пузырьком</li>
+                  <li class="card-item">Сортировка выбором</li>
+                  <li class="card-item">Сортировка вставками</li>
+                  <li class="card-item">Быстрая сортировка (QuickSort)</li>
+                  <li class="card-item">Сортировка слиянием (MergeSort)</li>
+              </ul>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Сортировка пузырьком</h3>
+              <p class="card-text">Сортировка пузырьком — это простой, но неэффективный алгоритм, который многократно проходит по списку, сравнивает соседние элементы и меняет их местами, если они находятся в неправильном порядке.</p>
+              <pre class="card-pre"><code class="card-code"># Пример сортировки пузырьком
+  def bubble_sort(arr):
+      n = len(arr)
+      for i in range(n):
+          for j in range(0, n-i-1):
+              if arr[j] > arr[j+1]:
+                  arr[j], arr[j+1] = arr[j+1], arr[j]
+      return arr
+  
+  arr = [5, 2, 9, 1, 5, 6]
+  print(bubble_sort(arr))  # Выводит: [1, 2, 5, 5, 6, 9]</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Сортировка выбором</h3>
+              <p class="card-text">Сортировка выбором — это алгоритм, который делит список на отсортированную и не отсортированную части. На каждом шаге выбирается минимальный элемент из не отсортированной части и добавляется в отсортированную часть.</p>
+              <pre class="card-pre"><code class="card-code"># Пример сортировки выбором
+  def selection_sort(arr):
+      n = len(arr)
+      for i in range(n):
+          min_idx = i
+          for j in range(i+1, n):
+              if arr[j] < arr[min_idx]:
+                  min_idx = j
+          arr[i], arr[min_idx] = arr[min_idx], arr[i]
+      return arr
+  
+  arr = [64, 25, 12, 22, 11]
+  print(selection_sort(arr))  # Выводит: [11, 12, 22, 25, 64]</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Сортировка вставками</h3>
+              <p class="card-text">Сортировка вставками — это алгоритм, который строит отсортированный список поэтапно, на каждом шаге добавляя новый элемент в отсортированную часть.</p>
+              <pre class="card-pre"><code class="card-code"># Пример сортировки вставками
+  def insertion_sort(arr):
+      for i in range(1, len(arr)):
+          key = arr[i]
+          j = i - 1
+          while j >= 0 and key < arr[j]:
+              arr[j + 1] = arr[j]
+              j -= 1
+          arr[j + 1] = key
+      return arr
+  
+  arr = [12, 11, 13, 5, 6]
+  print(insertion_sort(arr))  # Выводит: [5, 6, 11, 12, 13]</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Быстрая сортировка (QuickSort)</h3>
+              <p class="card-text">Быстрая сортировка — это один из самых быстрых алгоритмов сортировки. Он работает по принципу "разделяй и властвуй", разделяя список на две части и рекурсивно сортируя их.</p>
+              <pre class="card-pre"><code class="card-code"># Пример быстрой сортировки
+  def quicksort(arr):
+      if len(arr) <= 1:
+          return arr
+      pivot = arr[len(arr) // 2]
+      left = [x for x in arr if x < pivot]
+      middle = [x for x in arr if x == pivot]
+      right = [x for x in arr if x > pivot]
+      return quicksort(left) + middle + quicksort(right)
+  
+  arr = [3, 6, 8, 10, 1, 2, 1]
+  print(quicksort(arr))  # Выводит: [1, 1, 2, 3, 6, 8, 10]</code></pre>
+          </div>
+  
+          <div class="card">
+              <h3 class="card-head">Сортировка слиянием (MergeSort)</h3>
+              <p class="card-text">Сортировка слиянием — это еще один алгоритм "разделяй и властвуй", который делит список на два подсписка, сортирует их рекурсивно и затем объединяет обратно в один отсортированный список.</p>
+              <pre class="card-pre"><code class="card-code"># Пример сортировки слиянием
+  def merge_sort(arr):
+      if len(arr) <= 1:
+          return arr
+      mid = len(arr) // 2
+      left = merge_sort(arr[:mid])
+      right = merge_sort(arr[mid:])
+      return merge(left, right)
+  
+  def merge(left, right):
+      result = []
+      i = j = 0
+      while i < len(left) and j < len(right):
+          if left[i] < right[j]:
+              result.append(left[i])
+              i += 1
+          else:
+              result.append(right[j])
+              j += 1
+      result.extend(left[i:])
+      result.extend(right[j:])
+      return result
+  
+  arr = [38, 27, 43, 3, 9, 82, 10]
+  print(merge_sort(arr))  # Выводит: [3, 9, 10, 27, 38, 43, 82]</code></pre>
+          </div>
+  
+          <div class="dz">
+              <h3 class="dz-head">Домашнее задание</h3>
+              <ul class="dz-list">
+                  <li class="dz-item">Реализуйте алгоритм сортировки пузырьком для списка строк и отсортируйте список по алфавиту.</li>
+                  <li class="dz-item">Напишите программу, которая генерирует список случайных чисел и
+  
+    
+  </body>
+</html>

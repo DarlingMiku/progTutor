@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Разработка веб-приложений с Flask</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое Flask?</h3>
+          <p class="card-text">
+            Flask — это легковесный веб-фреймворк для Python, который
+            используется для создания веб-приложений. Он предоставляет основу
+            для разработки приложений, от простых до сложных, при этом оставаясь
+            гибким и не перегруженным лишними функциями.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Установка Flask</h3>
+          <p class="card-text">
+            Для установки Flask нужно использовать менеджер пакетов
+            <strong>pip</strong>:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">pip install flask</code></pre>
+          <p class="card-text">
+            После этого вы можете начать разрабатывать веб-приложение с
+            использованием Flask.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Базовая структура Flask-приложения</h3>
+          <p class="card-text">
+            Вот пример самой простой структуры Flask-приложения:
+          </p>
+          <pre class="card-pre"><code class="card-code">from flask import Flask
+  
+  app = Flask(__name__)
+  
+  @app.route('/')
+  def home():
+      return "Привет, мир!"
+  
+  if __name__ == "__main__":
+      app.run(debug=True)</code></pre>
+          <p class="card-text">
+            Этот код создаст приложение с одной страницей, которая будет
+            отображать текст "Привет, мир!" при обращении по адресу
+            <code>http://127.0.0.1:5000/</code>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Маршруты в Flask</h3>
+          <p class="card-text">
+            Маршруты в Flask используются для связывания URL-адресов с
+            функциями. Например, можно создать маршрут для страницы "О нас":
+          </p>
+          <pre class="card-pre"><code class="card-code">@app.route('/about')
+  def about():
+      return "О нас"</code></pre>
+          <p class="card-text">
+            Теперь, при обращении по адресу
+            <code>http://127.0.0.1:5000/about</code>, приложение отобразит текст
+            "О нас".
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Использование шаблонов</h3>
+          <p class="card-text">
+            Flask поддерживает работу с HTML-шаблонами с использованием
+            библиотеки <strong>Jinja2</strong>. Вот пример шаблона, который
+            выводит список задач:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">from flask import render_template
+  
+  @app.route('/tasks')
+  def tasks():
+      task_list = ['Задача 1', 'Задача 2', 'Задача 3']
+      return render_template('tasks.html', tasks=task_list)</code></pre>
+          <p class="card-text">
+            В шаблоне <code>tasks.html</code> вы можете использовать переменную
+            <code>tasks</code>, которая будет содержать ваш список:
+          </p>
+          <pre class="card-pre"><code class="card-code">&lt;ul&gt;
+  {% for task in tasks %}
+      &lt;li&gt;{{ task }}&lt;/li&gt;
+  {% endfor %}
+  &lt;/ul&gt;</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Запуск приложения</h3>
+          <p class="card-text">
+            После написания кода приложения, его можно запустить командой:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">python app.py</code></pre>
+          <p class="card-text">
+            Приложение будет доступно по адресу
+            <code>http://127.0.0.1:5000/</code> в вашем браузере.
+          </p>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Создайте простое Flask-приложение с двумя маршрутами: главной
+              страницей и страницей "О нас".
+            </li>
+            <li class="dz-item">
+              Используя шаблоны, выведите список ваших любимых книг на отдельной
+              странице.
+            </li>
+            <li class="dz-item">
+              Добавьте страницу с контактной информацией и соответствующий
+              маршрут.
+            </li>
+            <li class="dz-item">
+              Разработайте форму, которая отправляет данные на сервер и выводит
+              их на странице.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

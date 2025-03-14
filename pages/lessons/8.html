@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+
+        <div class="lesson">
+            <h2 class="content-title">Словари и множества</h2>
+    
+            <div class="card">
+                <h3 class="card-head">Словари</h3>
+                <p class="card-text">Словарь — это неупорядоченная коллекция данных, которая хранит пары "ключ-значение". Ключи должны быть уникальными, а значения могут быть любого типа.</p>
+                <pre class="card-pre"><code class="card-code">my_dict = {"name": "Алексей", "age": 25, "city": "Москва"}</code></pre>
+                <p class="card-text">Для доступа к значению словаря используется его ключ.</p>
+                <pre class="card-pre"><code class="card-code">print(my_dict["name"])  # Выводит: Алексей</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Методы словаря</h3>
+                <p class="card-text">Словари имеют полезные методы, такие как <code class="card-code">get()</code>, <code class="card-code">keys()</code>, <code class="card-code">values()</code> и <code class="card-code">items()</code>.</p>
+                <pre class="card-pre"><code class="card-code">print(my_dict.get("age"))  # Выводит: 25</code></pre>
+                <pre class="card-pre"><code class="card-code">print(my_dict.keys())  # Выводит: dict_keys(['name', 'age', 'city'])</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Добавление и удаление элементов в словаре</h3>
+                <p class="card-text">Элементы можно добавлять с помощью новой пары "ключ-значение". Для удаления используется метод <code class="card-code">del</code>.</p>
+                <pre class="card-pre"><code class="card-code">my_dict["email"] = "alexey@example.com"  # Добавляем новый элемент
+    print(my_dict)  # Выводит: {'name': 'Алексей', 'age': 25, 'city': 'Москва', 'email': 'alexey@example.com'}</code></pre>
+                <pre class="card-pre"><code class="card-code">del my_dict["city"]  # Удаляем элемент
+    print(my_dict)  # Выводит: {'name': 'Алексей', 'age': 25, 'email': 'alexey@example.com'}</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Множества</h3>
+                <p class="card-text">Множества — это неупорядоченные коллекции уникальных элементов. Множества не содержат дублирующихся значений.</p>
+                <pre class="card-pre"><code class="card-code">my_set = {1, 2, 3, 4, 5}</code></pre>
+                <p class="card-text">Для добавления и удаления элементов в множестве используются методы <code class="card-code">add()</code> и <code class="card-code">remove()</code>.</p>
+                <pre class="card-pre"><code class="card-code">my_set.add(6)  # Добавляем элемент
+    print(my_set)  # Выводит: {1, 2, 3, 4, 5, 6}</code></pre>
+                <pre class="card-pre"><code class="card-code">my_set.remove(3)  # Удаляем элемент
+    print(my_set)  # Выводит: {1, 2, 4, 5, 6}</code></pre>
+            </div>
+    
+            <div class="dz">
+                <h3 class="dz-head">Домашнее задание</h3>
+                <ul class="dz-list">
+                    <li class="dz-item">Создайте словарь с информацией о себе (например, имя, возраст, город). Выведите все ключи и значения словаря.</li>
+                    <li class="dz-item">Напишите программу, которая добавляет новые элементы в словарь и удаляет существующие.</li>
+                    <li class="dz-item">Создайте множество с числами от 1 до 5. Добавьте число 6 и удалите число 3. Выведите результат.</li>
+                    <li class="dz-item">Напишите программу, которая проверяет, содержится ли определенный элемент в множестве или словаре.</li>
+                </ul>
+            </div>
+    
+        </div>
+    
+    </main>
+    
+  </body>
+</html>

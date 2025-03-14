@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Библиотеки для научных вычислений</h2>
+
+        <div class="card">
+          <h3 class="card-head">
+            Зачем использовать библиотеки для научных вычислений?
+          </h3>
+          <p class="card-text">
+            Для выполнения научных вычислений, математического анализа и
+            обработки больших объемов данных разработаны различные библиотеки
+            Python. Они ускоряют выполнение вычислений, обеспечивают удобство
+            работы с матрицами и многими другими задачами.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Основные библиотеки для научных вычислений</h3>
+          <p class="card-text">
+            Существует несколько популярных библиотек для научных вычислений в
+            Python, среди которых наиболее широко используемыми являются:
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <strong>NumPy</strong> — для работы с многомерными массивами и
+              матрицами, а также для выполнения математических операций.
+            </li>
+            <li class="card-item">
+              <strong>Pandas</strong> — для анализа данных, работы с таблицами,
+              временными рядами и т. д.
+            </li>
+            <li class="card-item">
+              <strong>Matplotlib</strong> — для визуализации данных в виде
+              графиков и диаграмм.
+            </li>
+            <li class="card-item">
+              <strong>SciPy</strong> — для более сложных математических и
+              научных вычислений, включая линейную алгебру, оптимизацию и
+              интеграцию.
+            </li>
+            <li class="card-item">
+              <strong>SymPy</strong> — для символьных вычислений и работы с
+              алгебраическими выражениями.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Использование библиотеки NumPy</h3>
+          <p class="card-text">
+            Библиотека <strong>NumPy</strong> предоставляет высокоуровневые
+            математические функции и поддержку многомерных массивов. Она
+            является основой для большинства научных вычислений в Python.
+          </p>
+          <pre class="card-pre"><code class="card-code">import numpy as np
+  
+  # Создание массива
+  arr = np.array([1, 2, 3, 4, 5])
+  print(arr)  # Выводит: [1 2 3 4 5]
+  
+  # Операции с массивами
+  arr2 = arr * 2
+  print(arr2)  # Выводит: [2 4 6 8 10]</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Использование библиотеки Pandas</h3>
+          <p class="card-text">
+            Библиотека <strong>Pandas</strong> предоставляет структуры данных
+            для работы с таблицами и временными рядами. Она широко используется
+            для анализа данных, их очистки и визуализации.
+          </p>
+          <pre class="card-pre"><code class="card-code">import pandas as pd
+  
+  # Создание DataFrame
+  data = {'Name': ['Anna', 'Bob', 'Charlie'], 'Age': [23, 34, 45]}
+  df = pd.DataFrame(data)
+  print(df)
+  
+  # Операции с DataFrame
+  print(df['Age'].mean())  # Выводит средний возраст</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Использование библиотеки Matplotlib</h3>
+          <p class="card-text">
+            Библиотека <strong>Matplotlib</strong> позволяет строить графики и
+            диаграммы для визуализации данных.
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">import matplotlib.pyplot as plt
+  
+  # Создание графика
+  x = [1, 2, 3, 4, 5]
+  y = [1, 4, 9, 16, 25]
+  
+  plt.plot(x, y)
+  plt.title('Пример графика')
+  plt.xlabel('x')
+  plt.ylabel('y')
+  plt.show()</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Использование библиотеки SciPy</h3>
+          <p class="card-text">
+            Библиотека <strong>SciPy</strong> предоставляет дополнительные
+            математические функции, такие как интеграция, дифференцирование,
+            оптимизация и решение линейных систем.
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">from scipy import integrate
+  
+  # Пример численного интегрирования
+  result = integrate.quad(lambda x: x**2, 0, 1)
+  print(result)  # Выводит: (0.33333333333333337, 3.700743415417189e-11)</code></pre>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Используйте NumPy для выполнения элементарных операций с
+              массивами: сложение, умножение, извлечение подмассивов.
+            </li>
+            <li class="dz-item">
+              Создайте DataFrame в Pandas и выполните несколько операций:
+              фильтрация данных, нахождение среднего значения.
+            </li>
+            <li class="dz-item">
+              Создайте график с помощью Matplotlib для функции y = x^3.
+            </li>
+            <li class="dz-item">
+              Решите задачу оптимизации с помощью SciPy (например, нахождение
+              минимума функции).
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

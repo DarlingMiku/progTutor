@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Переменные и типы данных</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое переменная?</h3>
+          <p class="card-text">
+            Переменная — это именованная область памяти, в которой хранится
+            значение. В Python переменная создаётся при присвоении ей значения.
+          </p>
+          <p class="card-text">Пример объявления переменной:</p>
+          <pre class="card-pre"><code class="card-code">name = "Алиса"
+    age = 25
+    is_student = True</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Основные типы данных</h3>
+          <ul class="card-list">
+            <li class="card-item">
+              <span class="card-highlight">int</span> — целые числа (10, -5, 42)
+            </li>
+            <li class="card-item">
+              <span class="card-highlight">float</span> — числа с плавающей
+              точкой (3.14, -0.5, 2.71)
+            </li>
+            <li class="card-item">
+              <span class="card-highlight">str</span> — строки ("Hello",
+              'Python')
+            </li>
+            <li class="card-item">
+              <span class="card-highlight">bool</span> — логические значения
+              (True, False)
+            </li>
+          </ul>
+          <p class="card-text">
+            Python поддерживает автоматическое определение типа переменной:
+          </p>
+          <pre class="card-pre"><code class="card-code">x = 10        # int
+    y = 3.14      # float
+    text = "Привет" # str
+    is_happy = True # bool</code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Функция type()</h3>
+          <p class="card-text">
+            Чтобы узнать тип переменной, можно использовать встроенную функцию
+            <code class="card-code">type()</code>:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">print(type(42))       # <class 'int'>
+    print(type(3.14))     # <class 'float'>
+    print(type("Hello"))  # <class 'str'>
+    print(type(True))     # <class 'bool'></code></pre>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Изменение типа данных (кастинг)</h3>
+          <p class="card-text">
+            Python позволяет изменять тип данных с помощью встроенных функций:
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <code class="card-code">int(x)</code> — преобразует в целое число
+            </li>
+            <li class="card-item">
+              <code class="card-code">float(x)</code> — преобразует в число с
+              плавающей точкой
+            </li>
+            <li class="card-item">
+              <code class="card-code">str(x)</code> — преобразует в строку
+            </li>
+            <li class="card-item">
+              <code class="card-code">bool(x)</code> — преобразует в логический
+              тип
+            </li>
+          </ul>
+          <p class="card-text">Пример:</p>
+          <pre class="card-pre"><code class="card-code">num = "42"
+    converted_num = int(num)  # Преобразование строки в число
+    print(converted_num + 8)  # 50</code></pre>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">Создайте переменные разных типов данных.</li>
+            <li class="dz-item">
+              Выведите их типы с помощью <code class="card-code">type()</code>.
+            </li>
+            <li class="dz-item">
+              Примените преобразование типов и посмотрите результат.
+            </li>
+            <li class="dz-item">
+              Напишите программу, которая запрашивает у пользователя число и
+              выводит его квадрат.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

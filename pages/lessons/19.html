@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-nav">
+        <a href="../notfound.html">Верстка</a>
+        <a href="../notfound.html">JavaScript</a>
+        <a href="../notfound.html">TypeScript</a>
+        <a href="../notfound.html">Node</a>
+        <a href="../notfound.html">Java</a>
+        <a href="../notfound.html">PHP</a>
+        <a href="../python.html" class="pick">Python</a>
+        <a href="../notfound.html">С++</a>
+        <a href="../notfound.html">Rust</a>
+        <a href="../notfound.html">SQL</a>
+        <a href="../notfound.html">Vue</a>
+      </div>
+    </header>
+
+    <main class="content container">
+      <div class="lesson">
+        <h2 class="content-title">Работа с базами данных (SQL)</h2>
+
+        <div class="card">
+          <h3 class="card-head">Что такое SQL?</h3>
+          <p class="card-text">
+            SQL (Structured Query Language) — это язык запросов для работы с
+            реляционными базами данных. Он позволяет создавать, изменять,
+            извлекать и удалять данные из базы данных, а также управлять ее
+            структурой.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Основные команды SQL</h3>
+          <p class="card-text">
+            SQL включает в себя несколько основных команд для работы с базой
+            данных:
+          </p>
+          <ul class="card-list">
+            <li class="card-item">
+              <strong>SELECT</strong> — извлекает данные из базы данных.
+            </li>
+            <li class="card-item">
+              <strong>INSERT</strong> — вставляет новые данные.
+            </li>
+            <li class="card-item">
+              <strong>UPDATE</strong> — обновляет существующие данные.
+            </li>
+            <li class="card-item"><strong>DELETE</strong> — удаляет данные.</li>
+            <li class="card-item">
+              <strong>CREATE</strong> — создает таблицы и другие объекты базы
+              данных.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Создание базы данных и таблицы</h3>
+          <p class="card-text">
+            Для создания базы данных используйте команду
+            <strong>CREATE DATABASE</strong>, а для создания таблицы —
+            <strong>CREATE TABLE</strong>:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">CREATE DATABASE my_database;</code></pre>
+          <p class="card-text">Создание таблицы:</p>
+          <pre class="card-pre"><code class="card-code">CREATE TABLE users (
+      id INT PRIMARY KEY AUTO_INCREMENT,
+      name VARCHAR(100),
+      email VARCHAR(100)
+  );</code></pre>
+          <p class="card-text">
+            Это создаст таблицу <code>users</code> с тремя колонками:
+            <code>id</code>, <code>name</code> и <code>email</code>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Вставка данных в таблицу</h3>
+          <p class="card-text">
+            Для добавления данных в таблицу используется команда
+            <strong>INSERT INTO</strong>:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">INSERT INTO users (name, email)
+  VALUES ('Иван Иванов', 'ivan@example.com');</code></pre>
+          <p class="card-text">
+            Эта команда добавит новую строку в таблицу <code>users</code>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Извлечение данных</h3>
+          <p class="card-text">
+            Для извлечения данных используйте команду <strong>SELECT</strong>:
+          </p>
+          <pre
+            class="card-pre"
+          ><code class="card-code">SELECT * FROM users;</code></pre>
+          <p class="card-text">
+            Эта команда вернет все данные из таблицы <code>users</code>.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Обновление данных</h3>
+          <p class="card-text">
+            Для обновления данных используется команда <strong>UPDATE</strong>:
+          </p>
+          <pre class="card-pre"><code class="card-code">UPDATE users
+  SET email = 'newemail@example.com'
+  WHERE name = 'Иван Иванов';</code></pre>
+          <p class="card-text">
+            Эта команда обновит электронную почту пользователя с именем "Иван
+            Иванов".
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="card-head">Удаление данных</h3>
+          <p class="card-text">
+            Для удаления данных используйте команду <strong>DELETE</strong>:
+          </p>
+          <pre class="card-pre"><code class="card-code">DELETE FROM users
+  WHERE name = 'Иван Иванов';</code></pre>
+          <p class="card-text">
+            Эта команда удалит строку с данными пользователя "Иван Иванов" из
+            таблицы.
+          </p>
+        </div>
+
+        <div class="dz">
+          <h3 class="dz-head">Домашнее задание</h3>
+          <ul class="dz-list">
+            <li class="dz-item">
+              Создайте свою базу данных и таблицу с несколькими полями
+              (например, для пользователей, товаров или заказов).
+            </li>
+            <li class="dz-item">
+              Заполните таблицу данными с помощью команды
+              <strong>INSERT</strong>.
+            </li>
+            <li class="dz-item">
+              Напишите запрос, который извлекает все данные из таблицы и
+              фильтрует их по определенному условию (например, все пользователи
+              с конкретным email-адресом).
+            </li>
+            <li class="dz-item">
+              Попробуйте обновить данные с помощью <strong>UPDATE</strong> и
+              удалить их с помощью <strong>DELETE</strong>.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

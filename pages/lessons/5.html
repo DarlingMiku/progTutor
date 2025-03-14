@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PythonTeacher</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header class="header">
+        <div class="header-nav">
+          <a href="../notfound.html">Верстка</a>
+          <a href="../notfound.html">JavaScript</a>
+          <a href="../notfound.html">TypeScript</a>
+          <a href="../notfound.html">Node</a>
+          <a href="../notfound.html">Java</a>
+          <a href="../notfound.html">PHP</a>
+          <a href="../python.html" class="pick">Python</a>
+          <a href="../notfound.html">С++</a>
+          <a href="../notfound.html">Rust</a>
+          <a href="../notfound.html">SQL</a>
+          <a href="../notfound.html">Vue</a>
+        </div>
+      </header>
+
+    <main class="content container">
+
+        <div class="lesson">
+            <h2 class="content-title">Циклы в Python</h2>
+    
+            <div class="card">
+                <h3 class="card-head">Цикл while</h3>
+                <p class="card-text">Цикл <code class="card-code">while</code> выполняет блок кода, пока условие истинно.</p>
+                <pre class="card-pre"><code class="card-code">x = 0
+    while x &lt; 5:
+        print(x)
+        x += 1</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Цикл for</h3>
+                <p class="card-text">Цикл <code class="card-code">for</code> используется для перебора элементов в коллекциях (списки, строки, множества и т.д.).</p>
+                <pre class="card-pre"><code class="card-code">for i in range(5):
+        print(i)</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Операторы break и continue</h3>
+                <p class="card-text">Оператор <code class="card-code">break</code> завершает выполнение цикла, а оператор <code class="card-code">continue</code> пропускает текущую итерацию цикла и продолжает выполнение с следующей итерации.</p>
+                <pre class="card-pre"><code class="card-code">for i in range(10):
+        if i == 5:
+            break
+        print(i)</code></pre>
+                <pre class="card-pre"><code class="card-code">for i in range(5):
+        if i == 3:
+            continue
+        print(i)</code></pre>
+            </div>
+    
+            <div class="card">
+                <h3 class="card-head">Циклы с else</h3>
+                <p class="card-text">Циклы <code class="card-code">for</code> и <code class="card-code">while</code> могут содержать блок <code class="card-code">else>, который выполняется, если цикл завершился без использования <code class="card-code">break</code>.</p>
+                <pre class="card-pre"><code class="card-code">for i in range(5):
+        print(i)
+    else:
+        print("Цикл завершился")</code></pre>
+            </div>
+    
+            <div class="dz">
+                <h3 class="dz-head">Домашнее задание</h3>
+                <ul class="dz-list">
+                    <li class="dz-item">Напишите программу, которая выводит все числа от 1 до 20, используя цикл <code class="card-code">for</code>.</li>
+                    <li class="dz-item">Напишите программу, которая находит сумму всех чисел от 1 до 100 с использованием цикла <code class="card-code">while</code>.</li>
+                    <li class="dz-item">Создайте программу, которая выводит все четные числа от 1 до 50, пропуская числа, кратные 7, с помощью оператора <code class="card-code">continue</code>.</li>
+                    <li class="dz-item">Напишите программу, которая выводит таблицу умножения от 1 до 5, используя циклы <code class="card-code">for</code> и <code class="card-code">else</code>.</li>
+                </ul>
+            </div>
+    
+        </div>
+    
+    </main>
+    
+  </body>
+</html>
