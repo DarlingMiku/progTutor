@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PythonTeacher</title>
     <link rel="stylesheet" href="../assets/style.css" />
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
     <header class="header">
@@ -24,205 +23,432 @@
       </div>
     </header>
 
-    <main class="content" id="app">
+    <main class="content">
       <h1 class="page-heading">Основной учебник Python</h1>
       <h1 class="page-heading" style="margin-top: 30px;">Основы</h1>
 
       <section class="course-card--wrapper container">
-        <a
-          v-for="lesson in lessons"
-          :href="lesson.link"
-          :class="['course-card']"
-        >
+        <a href="../pages/lessons/1.html" class="course-card">
           <div class="main-info">
             <div class="image">
-              <img
-                src="../assets/images/images.png"
-                width="31px"
-                height="32px"
-              />
+              <img src="../assets/images/images.png" width="31px" height="32px" />
             </div>
             <div class="details">
               <div class="top">
                 <span class="type"></span>
-                <span :class="lesson.difficulty"
-                  >{{ lesson.difficultyText }}</span
-                >
+                <span class="easy">Легко</span>
               </div>
               <div class="middle">
-                <h2>{{ lesson.title }}</h2>
+                <h2>Введение в Python</h2>
               </div>
               <div class="bottom">
-                <span class="length">{{ lesson.duration }}</span>
+                <span class="length">30 минут</span>
               </div>
             </div>
           </div>
         </a>
+
+        <a href="../pages/lessons/2.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="easy">Легко</span>
+              </div>
+              <div class="middle">
+                <h2>Переменные и типы данных</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">40 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/3.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="easy">Легко</span>
+              </div>
+              <div class="middle">
+                <h2>Операторы в Python</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">50 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/4.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="medium">Средне</span>
+              </div>
+              <div class="middle">
+                <h2>Условные конструкции</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">50 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/5.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="medium">Средне</span>
+              </div>
+              <div class="middle">
+                <h2>Циклы в Python</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">55 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/6.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="medium">Средне</span>
+              </div>
+              <div class="middle">
+                <h2>Функции и их использование</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">60 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/7.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Списки и кортежи</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">65 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/8.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Словари и множества</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">70 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/9.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="medium">Средне</span>
+              </div>
+              <div class="middle">
+                <h2>Обработка ошибок и исключений</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">45 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/10.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="medium">Средне</span>
+              </div>
+              <div class="middle">
+                <h2>Модули и пакеты</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">60 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/11.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="medium">Средне</span>
+              </div>
+              <div class="middle">
+                <h2>Работа с файлами</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">50 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/12.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Объектно-ориентированное программирование (ООП)</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">80 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/13.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Алгоритмы сортировки</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">75 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/14.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Библиотеки для научных вычислений</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">90 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/15.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="medium">Средне</span>
+              </div>
+              <div class="middle">
+                <h2>Регулярные выражения</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">60 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/16.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="medium">Средне</span>
+              </div>
+              <div class="middle">
+                <h2>Работа с JSON</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">55 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/17.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Асинхронное программирование</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">85 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/18.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Тестирование в Python</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">70 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/19.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Разработка веб-приложений с Flask</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">100 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/20.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Работа с базами данных (SQL)</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">90 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="../pages/lessons/21.html" class="course-card">
+          <div class="main-info">
+            <div class="image">
+              <img src="../assets/images/images.png" width="31px" height="32px" />
+            </div>
+            <div class="details">
+              <div class="top">
+                <span class="type"></span>
+                <span class="hard">Сложно</span>
+              </div>
+              <div class="middle">
+                <h2>Основы многозадачности</h2>
+              </div>
+              <div class="bottom">
+                <span class="length">75 минут</span>
+              </div>
+            </div>
+          </div>
+        </a>
+        
       </section>
     </main>
   </body>
 </html>
-
-<script>
-  const { createApp, ref } = Vue;
-
-  const useLessons = () => {
-    const lessons = ref([
-      {
-        title: "Введение в Python",
-        difficulty: "easy",
-        difficultyText: "Легко",
-        duration: "30 минут",
-        link: "../pages/lessons/1.html",
-      },
-      {
-        title: "Переменные и типы данных",
-        difficulty: "easy",
-        difficultyText: "Легко",
-        duration: "40 минут",
-        link: "../pages/lessons/2.html",
-      },
-      {
-        title: "Операторы в Python",
-        difficulty: "easy",
-        difficultyText: "Легко",
-        duration: "50 минут",
-        link: "../pages/lessons/3.html",
-      },
-      {
-        title: "Условные конструкции",
-        difficulty: "medium",
-        difficultyText: "Средне",
-        duration: "50 минут",
-        link: "../pages/lessons/4.html",
-      },
-      {
-        title: "Циклы в Python",
-        difficulty: "medium",
-        difficultyText: "Средне",
-        duration: "55 минут",
-        link: "../pages/lessons/5.html",
-      },
-      {
-        title: "Функции и их использование",
-        difficulty: "medium",
-        difficultyText: "Средне",
-        duration: "60 минут",
-        link: "../pages/lessons/6.html",
-      },
-      {
-        title: "Списки и кортежи",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "65 минут",
-        link: "../pages/lessons/7.html",
-      },
-      {
-        title: "Словари и множества",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "70 минут",
-        link: "../pages/lessons/8.html",
-      },
-      {
-        title: "Обработка ошибок и исключений",
-        difficulty: "medium",
-        difficultyText: "Средне",
-        duration: "45 минут",
-        link: "../pages/lessons/9.html",
-      },
-      {
-        title: "Модули и пакеты",
-        difficulty: "medium",
-        difficultyText: "Средне",
-        duration: "60 минут",
-        link: "../pages/lessons/10.html",
-      },
-      {
-        title: "Работа с файлами",
-        difficulty: "medium",
-        difficultyText: "Средне",
-        duration: "50 минут",
-        link: "../pages/lessons/11.html",
-      },
-      {
-        title: "Объектно-ориентированное программирование (ООП)",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "80 минут",
-        link: "../pages/lessons/12.html",
-      },
-      {
-        title: "Алгоритмы сортировки",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "75 минут",
-        link: "../pages/lessons/13.html",
-      },
-      {
-        title: "Библиотеки для научных вычислений",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "90 минут",
-        link: "../pages/lessons/14.html",
-      },
-      {
-        title: "Регулярные выражения",
-        difficulty: "medium",
-        difficultyText: "Средне",
-        duration: "60 минут",
-        link: "../pages/lessons/15.html",
-      },
-      {
-        title: "Работа с JSON",
-        difficulty: "medium",
-        difficultyText: "Средне",
-        duration: "55 минут",
-        link: "../pages/lessons/16.html",
-      },
-      {
-        title: "Асинхронное программирование",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "85 минут",
-        link: "../pages/lessons/17.html",
-      },
-      {
-        title: "Тестирование в Python",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "70 минут",
-        link: "../pages/lessons/18.html",
-      },
-      {
-        title: "Разработка веб-приложений с Flask",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "100 минут",
-        link: "../pages/lessons/19.html",
-      },
-      {
-        title: "Работа с базами данных (SQL)",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "90 минут",
-        link: "../pages/lessons/20.html",
-      },
-      {
-        title: "Основы многозадачности",
-        difficulty: "hard",
-        difficultyText: "Сложно",
-        duration: "75 минут",
-        link: "../pages/lessons/21.html",
-      },
-    ]);
-
-    return { lessons };
-  };
-
-  createApp({
-    setup() {
-      return useLessons();
-    },
-  }).mount("#app");
-</script>

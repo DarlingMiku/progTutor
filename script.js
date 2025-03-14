@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function navigateTo(page) {
     if (page >= 1 && page <= 21) {
-        window.location.href = `/progTutor/pages/lessons/${page}.html`;
+      window.location.href = `/progTutor/pages/lessons/${page}.html`;
     }
   }
 
@@ -20,4 +20,13 @@ document.addEventListener("DOMContentLoaded", function () {
   nextButton.addEventListener("click", function () {
     navigateTo(getCurrentPage() + 1);
   });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const link = document.createElement("link");
+  link.rel = "icon";
+  link.type = "image/png";
+  link.href = "./assets/images/favicon.png"; 
+
+  document.head.appendChild(link);
 });
