@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function navigateTo(page) {
     if (page >= 1 && page <= 21) {
-        window.location.href = `/pages/lessons/${page}.html`;
+        window.location.href = `/progTutor/pages/lessons/${page}.html`;
     }
   }
 
